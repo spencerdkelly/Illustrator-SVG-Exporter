@@ -5,6 +5,9 @@
 // Automated script that prompts the user to input a layer Group name 
 // and then attempts to export all the groupItems within that Group
 // into separate SVG files.
+// The SVG filenames are taken from the name of each layer group inside 
+// the Illustrator file along with an optional suffix that the user 
+// can add from the dialog prompt.
 // ---------------------------------
 // AUTHOR: 
 // Spencer Kelly (Flovatar)
