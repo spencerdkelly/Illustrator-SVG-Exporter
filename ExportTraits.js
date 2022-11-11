@@ -18,7 +18,7 @@
 
 showGUI();
 
-function saveTraits(targetName) {
+function saveTraits(targetName, suffix) {
 
     var targetGroup = app.activeDocument.groupItems.getByName(targetName);
 
@@ -53,8 +53,13 @@ function saveTraits(targetName) {
                     var newLayer = newDoc.layers[0];
                     var newGroup = tempGroup.duplicate(newLayer, ElementPlacement.INSIDE);
 
+                    // Set the filename of the SVG to be saved
+                    var newFilename = tempGroup.name.replace(/\s+/g, '-');
+                    // Add suffix to the filename
+                    newFilename = newFilename + suffix;
+
                     // Get the file to save the document as svg into
-                    targetFile = this.getTargetFile(tempGroup.name, '.svg', destFolder);
+                    targetFile = this.getTargetFile(newFilename, '.svg', destFolder);
 
                     // Save as SVG
                     newDoc.exportFile(targetFile, ExportType.SVG, options);
@@ -143,8 +148,9 @@ function showGUI() {
         gui.alignChilren = ["fill", "fill"];
         var panelGroup = createGroup(gui, "row");
       
-        //Input Field
+        //Input Fields
         var userInput = createTextField(panelGroup, "Group Name:", "");
+        var userSuffix = createTextField(panelGroup, "Add suffix (optional):", "");
         // Buttons
         var buttons = createGroup(gui, "row");
         var cancelBtn = createButton(buttons, "Cancel", function() {
@@ -152,7 +158,7 @@ function showGUI() {
         });
         var exportBtn = createButton(buttons, "Export", function() {
           try {
-            saveTraits(userInput.text);
+            saveTraits(userInput.text, userSuffix.text);
             gui.close();
           } catch (e) {
             alert(e);
