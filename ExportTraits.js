@@ -16,6 +16,8 @@
 // Copy this file into the Scripts folder within your Illustrator folder
 // e.g. on Mac OS the file path is as follows:
 // Applications/Adobe Illustrator 2023/Presets/en_GB/Scripts/
+// To run from inside Illustrator click File then select Scripts > ExportTraits
+// If you don't see the script there try restarted Illustrator.
 // =================================
 
 
