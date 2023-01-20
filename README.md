@@ -15,8 +15,7 @@ can add from the dialog prompt.
 HOW TO USE: <br>
 <ul>
 <li>Copy this file into the Scripts folder within your Illustrator folder
-e.g. on Mac OS the file path is as follows:</li>
-<li>Applications/Adobe Illustrator 2023/Presets/en_GB/Scripts/</li>
+e.g. on Mac OS the file path is as follows: Applications/Adobe Illustrator 2023/Presets/en_GB/Scripts/</li>
 <li>To run from inside Illustrator click File then select Scripts > ExportTraits</li>
-<li>If you don't see the script there try restarted Illustrator.</li>
+<li>If you don't see the script there try restarting Illustrator.</li>
 </ul>
